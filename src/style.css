@@ -1,0 +1,330 @@
+/*
+ *   CSS colours based on https://mozilla.ninja/visualelements/
+ */
+body {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	margin: 20px;
+	white-space: nowrap;
+}
+
+a {
+	color: #ff4f5e; /* Warm red */
+}
+
+/*
+ * CSS for diff viewer and file viewer
+ */
+.file-path {
+	color: white;
+	font-weight: bold;
+}
+.file-summary {
+	background-color: black;
+	padding: 0.8em;
+}
+
+/*
+ *  CSS for diff viewer
+ */
+/* XXX: The lines inside of pre overrun if the window is very little */
+pre { margin: 0; }
+.codecoverage-diffviewer table,th,tr,td {
+	border-collapse: collapse;
+	padding: 0px;
+}
+.return-home {
+	margin: 0em 0em 1em;
+}
+.coverage-meta {
+	display: flex;
+	flex-direction: column;
+	margin: 0em 0em 1em;
+}
+.meta-footer {
+	display: flex;
+	justify-content: space-around;
+	width: 20%;
+	min-width: 320px;
+	margin: auto;
+}
+.meta-footer a{
+	color: gray;
+	font-size:0.75em;
+}
+.coverage-meta-row {
+	display: flex;
+	justify-content: space-between;
+}
+.meta {
+	flex-direction: row;
+}
+.meta-right {
+	text-align: right;
+}
+.diff-block {
+	border: 1px solid #eaeaea;
+}
+.diff-block-table {
+	margin: 0.5em;
+}
+.diff-cell {
+	color: #959595; /* Dark grey */
+	padding: 0px 0.4em 0px 0px;
+}
+.diff-file {
+	margin: 0em 0em 1em;
+	min-width: 530px;
+	width: 100%;
+}
+.diff-line-at {
+	background-color: #959595; /* Dark grey */
+	font-weight: 400;
+	padding: 0.3em;
+}
+/* Diff viewer meta */
+.diff-meta, .net-coverage-meta, .parent-meta {
+	margin-bottom: 10px;
+}
+.net-lines-coverage-change {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+}
+/* Line coverage status*/
+.hit, .miss, .nocovchange {
+	width: 20px;
+}
+.hit {
+	background-color:#b6fc88;
+}
+.miss {
+	background-color:#f9c8c5;
+}
+.nocovchange {
+	background-color:#fff;
+}
+/* Line numbers */
+.old-line-number, .new-line-number {
+	text-align: right
+}
+
+/*
+ *  CSS for main view
+ */
+.app-disclaimer {
+	background-color: #54ffbd;
+	background-color: rgba(84, 255, 189, 0.1);
+	font-style: italic;
+	margin: 0em 0em 1em;
+	padding: 1em;
+}
+.polling-status {
+	/* Lemon yellow */
+	background-color: #fff44f; /* Fallback */
+	background-color: rgba(255, 244, 79, 0.3);
+	font-style: italic;
+	font-weight: 400;
+	margin: 0em 0em 1em;
+	padding: 1em;
+	text-align: center;
+}
+.changeset-viewer {
+	border-spacing: 0px;
+	margin: auto;
+}
+.error-message {
+	color:#ff0000
+}
+
+/* Changesets */
+.hidden-changeset {
+	display: none
+}
+
+.changeset-summary {
+	text-align: center;
+}
+.low-coverage {
+	/* Warm red */
+	background-color: #ff4f5e; /* Fallback */
+	background-color: rgba(255, 79, 94, 0.3);
+}
+.medium-coverage {
+	/* Lemon yellow */
+	background-color: #fff44f; /* Fallback */
+	background-color: rgba(255, 244, 79, 0.3);
+}
+.high-coverage {
+	/* Neon green */
+	background-color: #54ffbd; /* Fallback */
+	background-color: rgba(84, 255, 189, 0.3);
+}
+
+
+/*
+ *  CSS for file viewer
+ */
+.file-meta-center {
+	background-color: #f5f9fa; /* Light blue */
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+.file-meta-status {
+	border-bottom: 2px solid #3f87a6; /* Dark blue */
+	float: right;
+	margin-top: 15px;
+}
+.file-meta-ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: auto;
+}
+.file-meta-li {
+	display: inline-block;
+	margin: 0 10px;
+	width: 140px;
+	font-weight: bold;
+}
+.file-meta-title {
+	float: left;
+	font-weight: bold;
+	font-size: 2rem;
+}
+.file-meta-revision {
+	background-color: #959595; /* Dark grey */
+	font-weight: 400;
+	padding: 0.3em 0.8em;
+}
+.error-message {
+	color: red;
+}
+
+.file-view {
+	display: inline-block;
+}
+.file-view-table {
+	border: 1px solid #eaeaea;
+	border-spacing: 0;
+	border-collapse: collapse;
+	display: block;
+	margin-top: 10px;
+}
+.file-line {
+	border-bottom: 2px solid transparent;
+}
+.file-line:hover {
+	border-bottom: 2px solid #83d0f2; /* Sky blue */
+}
+.file-line.selected {
+	border-bottom: 2px solid #3f87a6 !important; /* Dark blue */
+}
+td.file-line-number, td.file-line-tests {
+	width: 40px;
+	border-right:1px solid #eaeaea;
+	color: Grey;
+	text-align: center;
+}
+td.file-line-text {
+	padding-left: 5px;
+}
+span.tests {
+	background: #21ba45;
+	border-radius: 10px;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	font-size: 0.8em;
+	padding: 1.5px;
+	min-width: 13px;
+}
+
+/* file view right-siderbar */
+.tests-viewer {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 280px;
+	border-left: solid 6px #eaeff2;
+	padding-left: 20px;
+	background-color: #f5f9fa; /* Light blue */
+}
+.tests-viewer-title {
+	display: inline-block;
+	color: white;
+	background-color: black;
+	font-weight: bold;
+	padding: 0.8em;
+	margin-top: 20px;
+	width: 240px;
+}
+.test-viewer-ul {
+	list-style-type: none;
+	padding: 0;
+	padding-top: 2px;
+	margin: 0;
+	margin-bottom: 10px;
+	border-top: 2px solid #3f87a6; /* Dark blue */
+	border-bottom: 2px solid #3f87a6;
+	/* make the test list scrollable */
+	position: fixed;
+	overflow-y: auto;
+	top: 110px;
+	bottom: 0;
+	width: 260px;
+}
+.test-switch {
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+	font-size: 1em;
+	border-top: 1px solid #CCC;
+}
+.test-symbol {
+	padding-left: 2px;
+	display: inline-block;
+	transition: 0.2s;
+}
+.test-symbol.expanded {
+	transform: rotate(90deg);
+}
+.test-name {
+	display: inline-block;
+	padding: 0.5em;
+	text-align: center;
+}
+.expandable-test-info {
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.3s;
+}
+.expandable-test-info.expanded {
+	height: 60px;
+}
+.test-detail-ul {
+	list-style-type: none;
+	padding: 0;
+	margin-left: 15px;
+	color: #666;
+}
+
+/* file view coverage percentage */
+.coverage-percentage-viewer {
+	display:inline-block;
+	border: 2px solid #3f87a6; /* Dark blue */
+	border-radius: 0.20rem;
+	padding: 0.2em 0.2em;
+}
+.coverage-percentage {
+	border-radius: 0.25rem;
+	font-size: 1em;
+	padding: 0.4em 0.8em;
+}
